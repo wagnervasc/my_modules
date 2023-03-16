@@ -7,3 +7,7 @@ resource "google_logging_metric" "log_sql_bkp_nok" {
         metric_kind = "DELTA"
     }
 }
+
+output "log_sql_bkp_nok_id" {
+    value = google_logging_metric.log_sql_bkp_nok.id
+}
